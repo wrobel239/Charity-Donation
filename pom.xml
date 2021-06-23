@@ -11,6 +11,7 @@
     <groupId>pl.coderslab</groupId>
     <artifactId>charity</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>war</packaging>
     <name>charity</name>
     <description>Charity project, created with love in CodersLab</description>
 
@@ -66,6 +67,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+<!--                <version>2.1.4</version>-->
             </plugin>
         </plugins>
     </build>
