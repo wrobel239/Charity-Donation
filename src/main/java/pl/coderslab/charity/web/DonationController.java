@@ -17,6 +17,7 @@ import pl.coderslab.charity.service.InstitutionService;
 import javax.persistence.EntityNotFoundException;
 import javax.validation.Valid;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Controller
 public class DonationController {
@@ -55,7 +56,14 @@ public class DonationController {
             throw new EntityNotFoundException("Musisz zaznaczyć co najmniej jedną kategorię i jedną fundację");
         }
         Donation savedDonation = donationService.saveDonation(donation, categories, organization);
+        model.addAttribute("categoriesToString", categoriesNameToString(savedDonation));
         model.addAttribute("donation", savedDonation);
         return "donationSummary";
+    }
+
+    public String categoriesNameToString (Donation donation){
+        return donation.getCategories().stream()
+                .map(category -> category.getName())
+                .collect(Collectors.joining(", "));
     }
 }
