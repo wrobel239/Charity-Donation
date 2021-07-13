@@ -27,12 +27,12 @@ public class Donation {
     @Max(value = 1000000, message = "Musi być przynajmniej 1 i maksymalnie milion")
     private Integer quantity;
 
-//    @Size(min = 1, message = "Musi być wybrana co najmniej jedna kategoria")
+//    @Size(min = 1, message = "Musi być wybrana co najmniej jedna kategoria"), tak mogłoby być przy bidnowaniu danych
     @ManyToMany
     @JoinTable(name = "donations_categories")
     private List<Category> categories = new ArrayList<>();
 
-//    @NotNull(message = "Musi być wybrana instytucja")
+//    @NotNull(message = "Musi być wybrana instytucja"), tak mogłoby być przy bidnowaniu danych
     @ManyToOne
     private Institution institution;
 

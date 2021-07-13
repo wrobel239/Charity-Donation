@@ -26,6 +26,7 @@
 
     <section class="form--steps">
         <div class="form--steps-container">
+            <!-- STEP 5 -->
             <div data-step="5">
                 <h3>Podsumowanie Twojej darowizny</h3>
 

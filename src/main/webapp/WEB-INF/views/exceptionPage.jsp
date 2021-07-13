@@ -25,11 +25,9 @@
 <%@ include file="header.jsp"%>
 
 <section class="stats">
-<%--    <div class="container container--85">--%>
         <h2><p>${url}</p></h2><br>
         <h2><p>${errorMessage}</p></h2><br>
         <h2><p>${exception}</p></h2><br>
-<%--    </div>--%>
 </section>
 
 <%@ include file="footer.jsp"%>
